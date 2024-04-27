@@ -27,14 +27,17 @@ function SignIn({ onClose }) {
               Login to SwipTory
             </div>
             <form>
-              <div className="formRow">
-                <p id="username">UserName</p>
+              <div className="formInput-container">
+                <div className="input-label">
+                  <p id="username">Username</p>
+                </div>
                 <div className="input-box">
                   <input type="text" placeholder="Enter username"></input>
                 </div>
-              </div>
-              <div className="formRow">
-                <p id="password">Password</p>
+
+                <div className="input-label">
+                  <p id="password">Password</p>
+                </div>
                 <div className="input-box">
                   <input
                     id="password"
@@ -44,9 +47,11 @@ function SignIn({ onClose }) {
                   <img src={image} onClick={toggle} />
                 </div>
               </div>
-              <button className="loginButton" type="submit">
-                Login
-              </button>
+              <div>
+                <button className="loginButton" type="submit">
+                  Login
+                </button>
+              </div>
             </form>
           </div>
           <img src={closeButton} className="close-modal" onClick={onClose} />

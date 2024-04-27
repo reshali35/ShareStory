@@ -13,7 +13,8 @@
 }
 .loginButton {
   width: 129px;
-  margin: 20px auto;
+  margin: 50px auto;
+  margin-left: 40%;
   border-radius: 20px;
   width: 129px;
   height: 45px;
@@ -22,18 +23,32 @@
 }
 form {
   display: grid;
+  grid-template-rows: auto auto;
 }
-.formRow {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+.formInput-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 10px;
 }
+.input-label {
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
 input,
-select {
+select,
+textarea {
   outline: 0;
   border: 0;
-  width: 240px;
   font-size: 17px;
+}
+.text-area {
+  height: 65px;
+  width: 280px;
+  margin: 10px;
+  border-radius: 1px;
+  border: 2px solid #090808;
+  padding-left: 10px;
 }
 .input-box {
   height: 35px;
@@ -45,6 +60,7 @@ select {
   display: flex;
   align-items: center;
 }
+
 .input-box img {
   width: 30px;
   height: 24px;
@@ -52,6 +68,12 @@ select {
 img {
   cursor: pointer;
 }
+
+/* .buttonsInput-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+} */
+
 .previousButton,
 .nextButton,
 .postButton {
@@ -71,5 +93,6 @@ img {
   background-color: #73abff;
 }
 .postButton {
+  margin-left: 140px;
   background-color: #ff7373;
 }

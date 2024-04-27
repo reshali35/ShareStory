@@ -37,6 +37,7 @@ body.active-modal {
   border-radius: 20px;
   width: 624px;
   height: 482px;
+  margin: 20px;
 }
 
 .close-modal {

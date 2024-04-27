@@ -10,30 +10,32 @@ function AddStory({ onClose }) {
         <div onClick={onClose} className="overlay"></div>
         <div className="modal-content">
           <div>
-            {/* <div id="signInHeader" className="center">
-              Login to SwipTory
-            </div> */}
             <form>
-              <div className="formRow">
-                <p id="Heading">Heading:</p>
+              <div className="formInput-container">
+                <div className="input-label">
+                  <p id="Heading">Heading:</p>
+                </div>
                 <div className="input-box">
                   <input type="text" placeholder="Your Heading"></input>
                 </div>
-              </div>
-              <div className="formRow">
-                <p id="description">Description:</p>
-                <div className="input-box">
-                  <input type="text" placeholder="Story Description"></input>
+
+                <div className="input-label">
+                  <p id="description">Description:</p>{" "}
                 </div>
-              </div>
-              <div className="formRow">
-                <p id="storyImage">Image:</p>
+                <div className="text-area">
+                  <textarea placeholder="Story Description"></textarea>
+                </div>
+
+                <div className="input-label">
+                  <p id="storyImage">Image:</p>
+                </div>
                 <div className="input-box">
                   <input type="text" placeholder="Add Image URL"></input>
                 </div>
-              </div>
-              <div className="formRow">
-                <p id="category">Category:</p>
+
+                <div className="input-label">
+                  <p id="category">Category:</p>
+                </div>
                 <div>
                   <select className="input-box">
                     <option>Select Category</option>
@@ -45,7 +47,7 @@ function AddStory({ onClose }) {
                   </select>
                 </div>
               </div>
-              <div>
+              <div className="buttonsInput-container">
                 <button className="previousButton">Previous</button>
                 <button className="nextButton">Next</button>
                 <button className="postButton" type="submit">
