@@ -4,7 +4,8 @@ import SignIn from "./SignIn";
 import AddStory from "./AddStory";
 
 export default function Modal() {
-  const [modal, setModal] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [add, setAdd] = useState(false);
 
   // const toggleModal = () => {
   //   setModal(!modal);
@@ -20,7 +21,7 @@ export default function Modal() {
     <>
       <button
         onClick={() => {
-          setModal(true);
+          setLogin(true);
         }}
         className="btn-modal"
       >
@@ -28,25 +29,25 @@ export default function Modal() {
       </button>
       <button
         onClick={() => {
-          setModal(true);
+          setAdd(true);
         }}
         className="btn-modal"
       >
         Add Story
       </button>
 
-      {modal && (
+      {login && (
         <SignIn
           onClose={() => {
-            setModal(false);
+            setLogin(false);
           }}
         />
       )}
 
-      {modal && (
+      {add && (
         <AddStory
           onClose={() => {
-            setModal(false);
+            setAdd(false);
           }}
         />
       )}
