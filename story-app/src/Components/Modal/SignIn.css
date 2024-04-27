@@ -1,0 +1,41 @@
+/* .modal-content {
+  width: 624px;
+  height: 482px;
+  top: 199px;
+  left: 349px;
+  border-radius: 20px;
+} */
+
+#signInHeader {
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+}
+.loginButton {
+  width: 129px;
+  margin: 20px auto;
+  border-radius: 20px;
+  width: 129px;
+  height: 45px;
+  background-color: #73abff;
+}
+form {
+  display: grid;
+}
+.formRow {
+  display: flex;
+}
+#username {
+  font-size: 20px;
+  margin: 10px;
+}
+#password {
+  font-size: 20px;
+  margin: 13px;
+}
+input {
+  height: 35px;
+  width: 245px;
+  margin: 10px;
+  padding-left: 10px;
+}
