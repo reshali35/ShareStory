@@ -18,24 +18,39 @@
   width: 129px;
   height: 45px;
   background-color: #73abff;
+  cursor: pointer;
 }
 form {
   display: grid;
 }
 .formRow {
   display: flex;
+  align-items: center;
 }
-#username {
-  font-size: 20px;
-  margin: 10px;
-}
+#username,
 #password {
   font-size: 20px;
-  margin: 13px;
 }
 input {
+  outline: 0;
+  border: 0;
+  width: 240px;
+  font-size: 17px;
+}
+.input-box {
   height: 35px;
-  width: 245px;
+  width: 280px;
   margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #969696;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.input-box img {
+  width: 30px;
+  height: 24px;
+}
+img {
+  cursor: pointer;
 }

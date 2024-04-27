@@ -1,7 +1,22 @@
 import "./Modal.css";
 import "./SignIn.css";
+import React, { useState } from "react";
+import eyeClosed from "./eye-closed.png";
+import eyeOpen from "./eye-open.png";
+import closeButton from "./closeIcon.jpg";
 
 function SignIn({ onClose }) {
+  const [password, setPassword] = useState("password");
+  const [image, setImage] = useState(eyeClosed);
+  const toggle = () => {
+    if (password == "password") {
+      setPassword("text");
+      setImage(eyeOpen);
+    } else {
+      setPassword("password");
+      setImage(eyeClosed);
+    }
+  };
   return (
     <>
       <div className="modal">
@@ -14,42 +29,31 @@ function SignIn({ onClose }) {
             <form>
               <div className="formRow">
                 <p id="username">UserName</p>
-                <input type="text" placeholder="Enter username"></input>
+                <div className="input-box">
+                  <input type="text" placeholder="Enter username"></input>
+                </div>
               </div>
               <div className="formRow">
                 <p id="password">Password</p>
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Enter password"
-                ></input>
-                <span onClick={eye}>
-                  <i class="fas fa-eye"></i>
-                </span>
+                <div className="input-box">
+                  <input
+                    id="password"
+                    type={password}
+                    placeholder="Enter password"
+                  ></input>
+                  <img src={image} onClick={toggle} />
+                </div>
               </div>
               <button className="loginButton" type="submit">
                 Login
               </button>
             </form>
           </div>
-          <button className="close-modal" onClick={onClose}>
-            CLOSE
-          </button>
+          <img src={closeButton} className="close-modal" onClick={onClose} />
         </div>
       </div>
     </>
   );
 }
-const passwordField = document.getElementById("password");
-const eye = () => {
-  if (document.getElementById("password").type === "password") {
-    document.getElementById("password").type = "text";
-    document.span.classList.remove("fa-eye");
-    document.span.classList.add("fa-eye-slash");
-  } else {
-    document.getElementById("password").type = "password";
-    document.span.classList.remove("fa-eye-slash");
-    document.span.classList.add("fa-eye");
-  }
-};
+
 export default SignIn;
