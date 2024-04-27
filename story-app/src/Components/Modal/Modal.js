@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 import SignIn from "./SignIn";
+import AddStory from "./AddStory";
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
@@ -23,11 +24,27 @@ export default function Modal() {
         }}
         className="btn-modal"
       >
-        Open
+        Login
+      </button>
+      <button
+        onClick={() => {
+          setModal(true);
+        }}
+        className="btn-modal"
+      >
+        Add Story
       </button>
 
       {modal && (
         <SignIn
+          onClose={() => {
+            setModal(false);
+          }}
+        />
+      )}
+
+      {modal && (
+        <AddStory
           onClose={() => {
             setModal(false);
           }}
