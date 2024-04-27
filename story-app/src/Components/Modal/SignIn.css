@@ -26,12 +26,10 @@ form {
 .formRow {
   display: flex;
   align-items: center;
-}
-#username,
-#password {
   font-size: 20px;
 }
-input {
+input,
+select {
   outline: 0;
   border: 0;
   width: 240px;
@@ -41,8 +39,8 @@ input {
   height: 35px;
   width: 280px;
   margin: 10px;
-  border-radius: 5px;
-  border: 1px solid #969696;
+  border-radius: 1px;
+  border: 2px solid #090808;
   padding-left: 10px;
   display: flex;
   align-items: center;
@@ -53,4 +51,25 @@ input {
 }
 img {
   cursor: pointer;
+}
+.previousButton,
+.nextButton,
+.postButton {
+  width: 129px;
+  margin: 20px auto;
+  border-radius: 20px;
+  border-color: rgb(253, 255, 255);
+  width: 129px;
+  height: 45px;
+  cursor: pointer;
+  color: white;
+}
+.previousButton {
+  background-color: #61d057;
+}
+.nextButton {
+  background-color: #73abff;
+}
+.postButton {
+  background-color: #ff7373;
 }

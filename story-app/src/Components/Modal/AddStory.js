@@ -15,32 +15,43 @@ function AddStory({ onClose }) {
             </div> */}
             <form>
               <div className="formRow">
-                <p id="Heading">Heading</p>
+                <p id="Heading">Heading:</p>
                 <div className="input-box">
                   <input type="text" placeholder="Your Heading"></input>
                 </div>
               </div>
               <div className="formRow">
-                <p id="description">Description</p>
+                <p id="description">Description:</p>
                 <div className="input-box">
                   <input type="text" placeholder="Story Description"></input>
                 </div>
               </div>
               <div className="formRow">
-                <p id="storyImage">Image</p>
+                <p id="storyImage">Image:</p>
                 <div className="input-box">
                   <input type="text" placeholder="Add Image URL"></input>
                 </div>
               </div>
               <div className="formRow">
-                <p id="category">Category</p>
-                <div className="input-box">
-                  <input type="text" placeholder="Select Category"></input>
+                <p id="category">Category:</p>
+                <div>
+                  <select className="input-box">
+                    <option>Select Category</option>
+                    <option>Food</option>
+                    <option>Health and Fitness</option>
+                    <option>Travel</option>
+                    <option>Movies</option>
+                    <option>Education</option>
+                  </select>
                 </div>
               </div>
-              {/* <button className="loginButton" type="submit">
-                Login
-              </button> */}
+              <div>
+                <button className="previousButton">Previous</button>
+                <button className="nextButton">Next</button>
+                <button className="postButton" type="submit">
+                  post
+                </button>
+              </div>
             </form>
           </div>
           <img src={closeButton} className="close-modal" onClick={onClose} />
