@@ -4,7 +4,7 @@ import "./SignIn.css";
 import React, { useState } from "react";
 import closeButton from "./closeIcon.jpg";
 
-function Slide({ onClose }) {
+function AddStory({ onClose }) {
   const [slideList, setSlideList] = useState([{ slide: "" }]);
   const [formList, setFormList] = useState([{ form: "" }]);
 
@@ -136,4 +136,4 @@ function Slide({ onClose }) {
   );
 }
 
-export default Slide;
+export default AddStory;
