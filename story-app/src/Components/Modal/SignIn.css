@@ -21,10 +21,10 @@
   background-color: #73abff;
   cursor: pointer;
 }
-form {
+/* form {
   display: grid;
   grid-template-rows: auto auto;
-}
+} */
 .formInput-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -68,12 +68,6 @@ textarea {
 img {
   cursor: pointer;
 }
-
-/* .buttonsInput-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-} */
-
 .previousButton,
 .nextButton,
 .postButton {
