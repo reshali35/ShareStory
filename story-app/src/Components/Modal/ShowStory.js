@@ -9,10 +9,17 @@ import blueSaveButton from "./Images/blueSaveButton.png";
 import whiteSaveButton from "./Images/whiteSaveButton.png";
 import React, { useState } from "react";
 import Stories from "react-insta-stories";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ShowStory = ({ onClose }) => {
   const [saveImage, setSaveImage] = useState(whiteSaveButton);
   const [heartImage, setHeartImage] = useState(whiteHeartButton);
+  const [state, setState] = useState({
+    value: "hello copied",
+    copied: false,
+  });
   const handleSave = () => {
     if (saveImage == whiteSaveButton) {
       setSaveImage(blueSaveButton);
@@ -26,6 +33,9 @@ const ShowStory = ({ onClose }) => {
     } else {
       setHeartImage(whiteHeartButton);
     }
+  };
+  const notify = () => {
+    toast.success("Link copied to clipboard");
   };
   const story = [
     {
@@ -47,7 +57,18 @@ const ShowStory = ({ onClose }) => {
             className="story-close-modal"
             onClick={onClose}
           />
-          <img src={storyShareButton} className="story-share-modal" />
+          <CopyToClipboard
+            text={state.value}
+            onCopy={() => setState({ copied: true })}
+          >
+            <img
+              src={storyShareButton}
+              className="story-share-modal"
+              onClick={notify}
+            />
+          </CopyToClipboard>
+          <ToastContainer className="copy-notification" />
+
           <img
             src={saveImage}
             className="story-save-modal"
