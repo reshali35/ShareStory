@@ -29,10 +29,12 @@
   display: grid;
   grid-template-columns: auto auto;
   margin: 10px;
+  min-width: 616px;
 }
 .input-label {
   margin-top: 10px;
-  margin-right: 50px;
+  margin-right: 30px;
+  margin-left: 10px;
 }
 
 input,
@@ -43,8 +45,8 @@ textarea {
   font-size: 17px;
 }
 .text-area {
-  height: 65px;
-  width: 280px;
+  height: 100px;
+  width: 340px;
   margin: 10px;
   border-radius: 1px;
   border: 2px solid #090808;
@@ -52,7 +54,7 @@ textarea {
 }
 .input-box {
   height: 35px;
-  width: 280px;
+  width: 340px;
   margin: 10px;
   border-radius: 1px;
   border: 2px solid #090808;
@@ -87,6 +89,6 @@ img {
   background-color: #73abff;
 }
 .postButton {
-  margin-left: 140px;
+  margin-left: 240px;
   background-color: #ff7373;
 }

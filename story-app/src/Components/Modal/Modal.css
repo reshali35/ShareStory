@@ -35,9 +35,9 @@ body.active-modal {
   background: #ffffff;
   padding: 14px 28px;
   border-radius: 20px;
-  min-width: 650px;
-  max-width: 800px;
-  height: 482px;
+  min-width: 720px;
+  max-width: 720px;
+  height: 500px;
   margin: 20px;
 }
 

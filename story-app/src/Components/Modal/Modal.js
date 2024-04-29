@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Modal.css";
 import SignIn from "./SignIn";
 import AddStory from "./AddStory";
+import Slide from "./Slide";
 
 export default function Modal() {
   const [login, setLogin] = useState(false);
@@ -45,7 +46,7 @@ export default function Modal() {
       )}
 
       {add && (
-        <AddStory
+        <Slide
           onClose={() => {
             setAdd(false);
           }}

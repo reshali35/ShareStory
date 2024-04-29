@@ -5,11 +5,12 @@
   flex-direction: row;
 }
 .slide-box {
-  width: 100px;
+  width: 90px;
   height: 60px;
   border-radius: 10px;
   text-align: center;
   margin: 8px;
+  line-height: 50px;
   box-shadow: 3px 7px 15px 2px #d6d1d1;
 }
 .slide-close-button {
