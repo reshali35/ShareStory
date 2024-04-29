@@ -1,5 +1,4 @@
 import "./Modal.css";
-import "./Slide.css";
 import "./SignIn.css";
 import React, { useState } from "react";
 import closeButton from "./closeIcon.jpg";

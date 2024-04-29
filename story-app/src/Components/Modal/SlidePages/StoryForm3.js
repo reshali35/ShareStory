@@ -1,5 +1,4 @@
 import "../Modal.css";
-import "../Slide.css";
 import "../SignIn.css";
 import { Controller, useFormContext } from "react-hook-form";
 

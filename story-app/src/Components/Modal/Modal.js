@@ -3,20 +3,12 @@ import "./Modal.css";
 import SignIn from "./SignIn";
 import AddStory from "./AddStory";
 import Slide from "./Slide";
+import ShowStory from "./ShowStory";
 
 export default function Modal() {
   const [login, setLogin] = useState(false);
-  const [add, setAdd] = useState(false);
-
-  // const toggleModal = () => {
-  //   setModal(!modal);
-  // };
-
-  // if (modal) {
-  //   document.body.classList.add("active-modal");
-  // } else {
-  //   document.body.classList.remove("active-modal");
-  // }
+  const [addStory, setAddStory] = useState(false);
+  const [showStory, setShowStory] = useState(false);
 
   return (
     <>
@@ -30,11 +22,19 @@ export default function Modal() {
       </button>
       <button
         onClick={() => {
-          setAdd(true);
+          setAddStory(true);
         }}
         className="btn-modal"
       >
         Add Story
+      </button>
+      <button
+        onClick={() => {
+          setShowStory(true);
+        }}
+        className="btn-modal"
+      >
+        Show Story
       </button>
 
       {login && (
@@ -45,10 +45,17 @@ export default function Modal() {
         />
       )}
 
-      {add && (
+      {addStory && (
         <Slide
           onClose={() => {
-            setAdd(false);
+            setAddStory(false);
+          }}
+        />
+      )}
+      {showStory && (
+        <ShowStory
+          onClose={() => {
+            setShowStory(false);
           }}
         />
       )}

@@ -1,5 +1,4 @@
 import "./Modal.css";
-import "./Slide.css";
 import "./SignIn.css";
 import React, { useState } from "react";
 import closeButton from "./closeIcon.jpg";
@@ -159,7 +158,7 @@ function Slide({ onClose }) {
                     color="primary"
                     type="submit"
                     disabled={activeStep != steps - 1}
-                    // onClick={handlePost}
+                    onClick={onClose}
                   >
                     Post
                   </button>
@@ -167,13 +166,9 @@ function Slide({ onClose }) {
               </FormProvider>
             </div>
           )}
+          <img src={closeButton} className="close-modal" onClick={onClose} />
         </div>
         {/* end modal-content */}
-        <img
-          src={closeButton}
-          className="close-modal btn-modal"
-          onClick={onClose}
-        />
       </div>
     </>
   );
