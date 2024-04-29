@@ -1,9 +1,9 @@
 import "./Modal.css";
 import "./SignIn.css";
 import React, { useState } from "react";
-import eyeClosed from "./eye-closed.png";
-import eyeOpen from "./eye-open.png";
-import closeButton from "./closeIcon.jpg";
+import closeButton from "./Images/closeIcon.jpg";
+import eyeClosed from "./Images/eye-closed.png";
+import eyeOpen from "./Images/eye-open.png";
 
 function SignIn({ onClose }) {
   const [password, setPassword] = useState("password");

@@ -1,7 +1,7 @@
 import "./Modal.css";
 import "./SignIn.css";
 import React, { useState } from "react";
-import closeButton from "./closeIcon.jpg";
+import closeButton from "./Images/closeIcon.jpg";
 import StoryForm1 from "./SlidePages/StoryForm1";
 import StoryForm2 from "./SlidePages/StoryForm2";
 import StoryForm3 from "./SlidePages/StoryForm3";

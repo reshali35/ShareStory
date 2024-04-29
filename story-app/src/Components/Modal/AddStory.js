@@ -1,7 +1,7 @@
 import "./Modal.css";
 import "./SignIn.css";
 import React, { useState } from "react";
-import closeButton from "./closeIcon.jpg";
+import closeButton from "./Images/closeIcon.jpg";
 
 function AddStory({ onClose }) {
   const [slideList, setSlideList] = useState([{ slide: "" }]);
