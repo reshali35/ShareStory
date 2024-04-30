@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: auto auto;
   margin: 10px;
-  min-width: 616px;
+  min-width: 681px;
 }
 .input-label {
   margin-top: 10px;

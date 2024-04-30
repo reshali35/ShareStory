@@ -9,6 +9,7 @@ import blueSaveButton from "./Images/blueSaveButton.png";
 import whiteSaveButton from "./Images/whiteSaveButton.png";
 import React, { useState } from "react";
 import Stories from "react-insta-stories";
+import { WithSeeMore } from "react-insta-stories";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,6 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 const ShowStory = ({ onClose }) => {
   const [saveImage, setSaveImage] = useState(whiteSaveButton);
   const [heartImage, setHeartImage] = useState(whiteHeartButton);
+
   const [state, setState] = useState({
     value: "hello copied",
     copied: false,
@@ -47,6 +49,7 @@ const ShowStory = ({ onClose }) => {
       duration: 2000,
     },
   ];
+
   return (
     <>
       <div className="modal">

@@ -35,17 +35,20 @@ function Slide({ onClose }) {
     { slide: "" },
   ]);
   const [steps, setSteps] = useState(3);
+  const handleSelect = (index) => {
+    setActiveStep(index);
+  };
   const handleSlideAdd = () => {
     setSlideList([...slideList, { slide: "" }]);
     setSteps(steps + 1);
-    setActiveStep(activeStep + 1);
+    setActiveStep(steps);
   };
   const handleSlideRemove = (index) => {
     const slist = [...slideList];
     slist.splice(index, 1);
     setSlideList(slist);
     setSteps(steps - 1);
-    setActiveStep(activeStep - 1);
+    setActiveStep(index - 1);
   };
 
   const methods = useForm({
@@ -76,7 +79,8 @@ function Slide({ onClose }) {
       category6: "",
     },
   });
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   const handlePost = (data) => {
     if (activeStep == steps - 1) {
@@ -106,16 +110,23 @@ function Slide({ onClose }) {
                 {slideList.map((singleSlide, index) => (
                   <div key={index}>
                     <div className="allslides">
-                      <div className="slide-box" id="slide-one">
+                      <div
+                        className="slide-box"
+                        id="slide-one"
+                        onClick={() => {
+                          handleSelect(index);
+                          console.log("index is", { index });
+                        }}
+                      >
                         Slide {index + 1}
-                        {index > 2 && (
-                          <img
-                            src={closeButton}
-                            className="slide-close-button"
-                            onClick={() => handleSlideRemove(index)}
-                          />
-                        )}
                       </div>
+                      {index > 2 && (
+                        <img
+                          src={closeButton}
+                          className="slide-close-button"
+                          onClick={() => handleSlideRemove(index)}
+                        />
+                      )}
                       {slideList.length - 1 === index &&
                         slideList.length < 6 && (
                           <div
